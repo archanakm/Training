@@ -33,6 +33,19 @@ a {
 a:hover {
     color: #999999;
 }
+input[type="email"]:focus,input[type="submit"]:focus, button:focus{
+  outline: none;
+}
+input[type="submit"]:hover{
+    opacity: 0.8;
+}
+input[type="submit"]:active, button:active {
+    position: relative;
+    top: 1px;
+}
+button:hover{
+  opacity: 0.8;  
+}
 /*.........................html5 display.......................*/
 address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
     display: block;
@@ -101,6 +114,7 @@ h6{
     font-family: "Asap-Regular";
     font-size: 16px;
     color: #ffffff;
+    margin: 10px 0px;
 }
 .h7{
     font-family: "Asap-Regular";
@@ -167,32 +181,49 @@ header h1{
     overflow:hidden;
     padding-bottom: 100px; /*height of the footer*/
 }
+.home .content-top{
+   background: url('../img/bg1_repeat.png')repeat; 
+   background-size: cover;
+}
 .content-top{
-    background: url('../img/bg1_repeat.png')repeat;
     position: relative;
-    background-size: cover;
     text-align: center;
 }
 .content-top .contents{
     padding: 76px 6px 0;
     display: inline-block;
     max-width: 700px;
+    vertical-align: middle;
+}
+.content-top .share-icons{
+    margin: 60px 0;
+}
+.share-icons li{
+    padding-left: 10px;
 }
 .content-top .contents h4{
-    width: 90%;
+    width: 96%;
     margin: 4% 0 0 4%;
 }
-.content-top .contents h6{
-    margin: 10px 0 50px;
-}
-#email-box{
+.content-top .contents .h4-sign-up{
     display: inline-block;
+    width: 84%;
+}
+/*.content-top .contents h6{
+    
+}*/
+#email-box{
+    display: table;
     padding: 0;
-    margin: 58px 0px 0px 51px; 
-    width: 100%;
     max-height: 58px;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 350px;
+    width: 100%;
+    margin: 5% auto 2% auto;
+}
+#email-box div{
+    display: table-cell;
+    width: 100%;
 }
 input[type="email"]{
     float: left;
@@ -200,20 +231,17 @@ input[type="email"]{
     border-radius: 40px 0px 0px 40px;
     background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.3);
     padding: 16px 0px 16px 25px;
-    max-width: 66%;
+    min-width: 243px;
 }
 input[type="submit"]{
     float: left;
     padding: 16px 19px 16px 12px;
-    width: 81px;
-    max-width: 20%;
+    min-width: 79px;
     background-color: #2ECC71;
     border: medium none transparent;
     border-radius: 0px 40px 40px 0px;
 }
-input[type="email"]:focus,input[type="submit"]:focus{
-  outline: none;
-}
+
 .down-arrow{
     background: url("../img/down-arrow.png") no-repeat;
     height: 80px;
@@ -226,6 +254,8 @@ input[type="email"]:focus,input[type="submit"]:focus{
 }
 .content-mid{
      width: 100%;
+     position: relative;
+     /*display: none;*/
 }
 .content-mid .contents{
     padding: 76px 0 0;
@@ -243,10 +273,10 @@ input[type="email"]:focus,input[type="submit"]:focus{
     background-color: #f1f1f1;
     vertical-align: middle;
 }
-.mid-center img{
+.img-left{
     float: left;
 }
-.mid-center .txt-right{
+.txt-right{
     float: right;
     text-align: left;
     padding-top: 50px;
@@ -260,17 +290,122 @@ input[type="email"]:focus,input[type="submit"]:focus{
     background-color: #f1f1f1;
     vertical-align: middle;
 }
-.mid-bottom img{
+.img-right
+.img-right-top{
     float: right;
     /*padding-left: 100px*/
 }
-.mid-bottom .txt-left{
+.txt-left{
     float: left;
     text-align: right;
     padding-top: 85px;
     width: 49%;
 }
-.content-bottom{
+.txt-left-top{
+    float: left;
+    text-align:left;
+    padding-top:0px;
+    width:56%;
+}
+.content-left{
+    margin-top: 87px
+}
+.content-right{
+    margin-top: 171px
+}
+.content-left div, .content-right div{
+    background-color: #fff;
+    text-align: left;
+    padding: 3%;
+}
+.content-left div:last-child,.content-right div:last-child{
+    margin-top: 14%;
+}
+/*.............red rounds.................*/
+.red-rounds{
+    position: relative;
+    top: -56px; 
+
+}
+.red-rounds li {
+    width: 2em;
+    height: 2em;    
+    border-radius: 1em;
+    background: red;
+    display: block;
+    color: white;
+    margin: 4.4em 0;
+    left: 2.37em;
+    position: relative;
+    font-family: "Asap-Bold";
+    text-align:center;
+
+}
+/*.red-rounds li::before{
+    content: '';
+    position: absolute;
+    top: -4.2em;
+    left: 1.4em;
+    width: .3em;
+    height: 7em;
+    background: blue;
+    z-index: -1;
+}*/
+.red-rounds li:first-child{
+    width: 5em;
+    height: 5em;
+    border-radius: 4em;
+    display: block;
+    left: -2px;
+    margin: 0 0 4.2em 0;
+    line-height: 100px;
+    background:#f1f1f1;
+    border: 7px solid #fff;
+    font-size: 20px;
+    color:#999999;
+}
+.red-rounds li:nth-child(2){
+    opacity:0.3;
+}
+.red-rounds li:nth-child(3){
+    opacity:0.4;
+}
+.red-rounds li:nth-child(4){
+    opacity:0.6;
+}
+.red-rounds li:nth-child(5){
+    opacity:0.7;
+}
+.red-rounds li:last-child {
+    width: 5em;
+    height: 5em;
+    border-radius: 4em;
+    display: block;
+    margin: 4.6em 0 0 0;
+    left: 4px;
+    line-height: 100px;
+    background:red;
+    font-size: 20px;
+    color:#fff;
+    opacity:0.8;
+}
+
+/*.red-rounds li:first-child::before {
+  display: none;
+}
+.red-rounds li:last-child::before {
+  left: 2.3em;
+}*/
+.blur{
+    top: 0px;
+    left: 49.5%;
+    width: 0.5%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+}
+/*...................................................................................*/
+.home .content-bottom{
     background: url('../img/bg2.png')no-repeat;
     text-align: center;
     background-size: cover;
@@ -279,35 +414,41 @@ input[type="email"]:focus,input[type="submit"]:focus{
     padding: 76px 10px;
     margin: 0 auto;
     max-width: 890px;
+    text-align: center;
 }
-.content-bottom .contents p{
+.home .content-bottom .contents p{
     padding-top: 20px;
 }
 .content-bottom .contents h6{
+   /* padding-top: 10px;*/
+}
+.content-bottom .share-icons{
+    margin: 0px 0 60px 0;
+}
+#hello{
+    background-color: #2ecc71;
+    border-radius: 40px;
+    font-family: "Asap-Regular";
+    font-size: 20.3px;
+    color: #ffffff;
+    border: 0 solid transparent;
+    padding: 17px 60px;
+    margin: 36px 0px 38px 0px;
+}
+.txt-center, .txt-center-bottom{
+    text-align: center;
+}
+.txt-center h5{
+   /* width: 54%;
+    margin: 0 auto;*/
+}
+.txt-center-bottom div:nth-child(2){
     padding-top: 10px;
 }
-.hand{
-    width: 100%;
-    height: 300px;
-    background-color: #333333;
+.txt-center-bottom div:nth-child(2) p{
+    padding: 0;
 }
-.hand .contents{
-    margin: 0 auto;
-    max-width: 800px;
-    padding-top: 21px;
-}
-.hand  img{
-    /*float: left;  */  
-}
-.hand .txt{
-    font-family: "Asap-Bold";
-    font-size: 48px;
-    color: #ffffff;
-    background: url("../img/hand.png")no-repeat;
-    padding: 99px 9px 120px 201px;
-}
-
-/*.fb-share{
+.fb-share{
     background-image: url("../img/fb_share.png");
     width: 260px;
     height: 60px;
@@ -321,7 +462,7 @@ input[type="email"]:focus,input[type="submit"]:focus{
     background-image: url("../img/email_share.png");
     width: 260px;
     height: 60px;
- }*/
+ }
 footer {
     position: relative;
     margin-top: -100px; /* negative value of footer height */
@@ -332,7 +473,28 @@ footer {
 footer .contents{
     text-align: center;
     margin: 50px auto;
+    max-width: 800px;
 }
+.hand{
+    width: 100%;
+    height: 300px;
+    background-color: #333333;
+}
+.hand .contents{
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 21px;
+}
+.hand .txt{
+    font-family: "Asap-Bold";
+    font-size: 48px;
+    color: #ffffff;  
+}
+.hand .hand-img{
+    background: url("../img/hand.png")no-repeat;
+    padding: 95px 7px 184px 199px;
+}
+
 .footer-icons li a{
     width: 40px;
     height: 40px;

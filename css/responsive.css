@@ -23,46 +23,67 @@
     .h7{
         font-size: 15px;
     }
-    #email-box {
-        margin: 7% 0 0 17%;
-    }
     .content-mid .contents{
-        /*float: left;*/
         padding: 0;
         max-width: 705px;
+        
      }
     .content-top .contents h4 {
         width: 69%;
         margin: 4% 0 0 17%;
     }
-     .mid-top .contents .txt-center,
-     .mid-center .contents img, 
-     .mid-center .contents .txt-right,
-     .mid-bottom .contents img,
-     .mid-bottom .contents .txt-left
+    .content-top .contents .h4-sign-up {
+        width: 75%;
+        margin: 4% auto;
+    }
+     .txt-center,
+     .img-left, 
+     .txt-right,
+     .img-right,
+     .txt-left,
+     .txt-left-top
      {
         float: none;
         width: auto;
         text-align: center;
         padding-top: 20px;
      }
+     .txt-left-top{
+        margin-bottom:70px;
+        /*width: 80%;
+        margin: 0 auto;*/
+     }
+     .txt-left-top h5{
+        line-height: 30px;
+        width: 92%;
+        margin: 0 auto;
+     }
+     .txt-center-bottom{
+        margin-top: 50px;
+    }
      .mid-center{
         padding-top: 0;
      }
      .mid-bottom{
         padding-bottom: 20px;
      }
-     .hand .contents{
+     /*.hand .contents{
         max-width: 700px;
         padding-left: 10%;
-     }
-     .hand .txt{
+     }*/
+    /* .hand .txt{
         font-size: 30px;
         padding: 103px 9px 142px 201px;
-    }
+    }*/
+    /*.content-top .share-icons > li >a,
+    .content-bottom .share-icons > li >a{
+        width: 220px;
+        height: 60px;
+        border-radius: 70px; 
+    }*/
     .content-bottom .contents{
         padding: 20px 0 30px;
-        max-width: 786px;
+        max-width: 700px;
      }
      .content-bottom .contents h4{
         font-size: 21px;
@@ -70,7 +91,23 @@
         margin: 0 11%;
      }
 }
-@media only screen and (min-width:320px) and (max-width:768px){
+@media only screen and (max-width:860px){
+    /*.content-top .share-icons,
+    .content-bottom .share-icons{
+        margin: 20px 0;
+        width: 50%;
+    }*/
+    .share-icons li{
+        padding-left: 0px;
+    }
+    .share-icons > li >a{
+       /* background-size: 90% 90%;*/
+        margin-left: 0px;
+        background-size: 220px;
+        width: 240px;
+    } 
+}
+@media only screen and (max-width:768px){
     h2{
         font-size: 38px;
         line-height: 42px;
@@ -79,20 +116,21 @@
         font-size: 30px;
     }
     h4{
-        font-size: 17px;
+        font-size: 22px;
     }
     h5{
         font-size: 20px;
         line-height: 24px;
         padding-top: 10px;
-        text-align: center;
+        text-align: justify;
         margin: 0 3%;
     }
     h6{
-        font-size: 13px;
+        font-size: 15px;
+        margin-bottom: 25px;
     }
     .h7{
-        font-size: 13px;
+        font-size: 18px;
     }
     .top-nav-left {
         float: left;
@@ -105,7 +143,7 @@
         font-size: 12pt;
     }
     .top-nav-right {
-        width: 20%;
+        /*width: 20%;*/
     }
     .top-nav-right li a{
         margin-left: -12px;
@@ -113,53 +151,176 @@
     .logo {
         float: left;
         width: 41%;
-        margin-left: 0%; 
-    }
-    .logo img{
-        width: 100%;
+        margin-left: 2%; 
     }
     header .fb,
     header .tweet
     {
         background-size: 70% 70%;
     }
-    input[type="email"] {
-        margin: 0 0 0 9%;
+    .content-top .contents .h4-sign-up {
+        display: inline-block;
+        width: 78%;
     }
-    /*#email-box {
-        margin: 5% 0% 0 11%;
-    }*/
+    .content-top .share-icons,
+    .content-bottom .share-icons{
+        margin: 20px 0;
+        width: 50%;
+    }
+    .share-icons li{
+        padding-left: 0px;
+    }
+    .share-icons > li >a{
+       /* background-size: 90% 90%;*/
+        margin-left: 0px;
+        background-size: 240px;
+        width: 280px;
+    } 
     .content-mid .contents {
         padding: 51px 0 0;
     }
     .mid-center{
         padding-top:0;
     }
-    .mid-center img,
-    .mid-bottom img
+    .img-left,
+    .img-right
     {
         float: none;
         width: 75%;
     }
-    .mid-center .txt-right, .mid-bottom .txt-left{
+    .img-right-top{
+        float: none;
+        width: 50%;
+    }
+    .txt-left, .txt-right, .txt-left-top{
         float: none;
         padding-top: 41px;
         width: 100%;
         text-align: center;
     }
+    .txt-left-top{
+        margin-bottom:70px;
+         /*width: 80%;
+         margin: 0 auto;*/
+    }
+    .txt-center h5{
+        width: 74%;
+        margin: 0 auto;
+    }
+    .txt-center-bottom{
+        margin-top: 50px;
+    }
+    .txt-center-bottom div:nth-child(2) p{
+        /*word-break: break-all;*/
+    }
     .mid-bottom {
         padding-bottom: 49px;
     }
     .content-bottom .contents {
-        padding: 7px 10px 22px;
+        padding: 7px 6px 22px;
     }
     .content-bottom .contents p {
         padding-top: 20px;
         line-height: 28px;
+        text-align: justify;
+        word-spacing: -0.8px;
     }
+   /* .hand .txt {
+        font-    word-spacing: -0.8px;size: 32px;
+        padding: 107px 8px 256px 203px;
+    }*/
+}
+@media only screen and (min-width:525px) and (max-width: 640px){
     .hand .txt {
-        font-size: 21px;
-        padding: 117px 16px 256px 126px;
-        background-size: 60% 70%;
+        font-size: 36px;
+    }
+    .hand .hand-img{
+        position: relative;
+        transform: scaleX(0.9);
+        padding: 100px 7px 184px 199px;
     }
 }
+@media only screen and (max-width:525px){
+    .hand .txt {
+        font-size: 35px;    
+        transform: scaleX(1.1) !important;
+    }
+    .hand .hand-img{
+        position: relative;
+        transform: scaleX(0.7);
+        left: -63px;
+        padding: 100px 7px 184px 199px;
+    }
+
+}
+@media only screen and (max-width:480px){
+    header{
+        margin: 0 1%;
+    }
+    .logo img {
+        width: 86%;
+    }
+    #email-box {
+        margin: 5% auto 2% auto;
+    }
+    input[type="email"] {
+        width: 68%;
+        min-width: auto;
+    }
+    input[type="submit"] {
+        min-width: 67px;
+    }
+    .img-right-top{
+        float: none;
+        width: 70%;
+    }
+    .txt-left-top h5{
+        text-align: justify;
+    }
+    .txt-center h5, .txt-right h5, .txt-left h5{
+        /*text-align: center;*/
+        margin: 0 auto;
+        width: 86%
+    }
+    .content-top .share-icons,
+    .content-bottom .share-icons{
+        margin: 20px 0;
+        width: 60%;
+    }
+ }
+  @media only screen  and (max-width:380px){
+    .hand .txt {
+        font-size: 36px;
+        transform: scaleX(1.1) !important;
+    }
+    .hand .hand-img{
+        position: relative;
+        transform: scaleX(0.6);
+        left: -77px;
+        padding: 100px 7px 184px 199px;
+    }
+    .content-top .share-icons,
+    .content-bottom .share-icons{
+        margin: 20px 0;
+        width: 70%;
+    }
+}
+ @media only screen  and (max-width:360px){
+    .img-right-top{
+        float: none;
+        width: 70%;
+    }
+    h3{
+        letter-spacing: -0.8px;
+    }
+
+    #hello{
+         padding: 17px 53px;
+    }
+    .content-top .share-icons,
+    .content-bottom .share-icons{
+        margin: 20px 0;
+        width: 94%;
+    }
+
+ }
